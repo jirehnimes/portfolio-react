@@ -16,7 +16,7 @@ const Button = ({ children, ...attributes }: ButtonPropsType) => {
   return (
     <button
       {...attributes}
-      className='button'
+      className='button is-primary'
     >
       {children || 'Button'}
     </button>
