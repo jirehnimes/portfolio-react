@@ -13,7 +13,14 @@ type ButtonPropsType = DetailedHTMLProps<
 > & { children?: ReactNode };
 
 const Button = ({ children, ...attributes }: ButtonPropsType) => {
-  return <button {...attributes}>{children || 'Button'}</button>;
+  return (
+    <button
+      {...attributes}
+      className='button'
+    >
+      {children || 'Button'}
+    </button>
+  );
 };
 
 export default Button;
