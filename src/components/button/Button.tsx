@@ -10,7 +10,7 @@ import {
 type ButtonPropsType = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
-> & { children: ReactNode };
+> & { children?: ReactNode };
 
 const Button = ({ children, ...attributes }: ButtonPropsType) => {
   return <button {...attributes}>{children || 'Button'}</button>;
