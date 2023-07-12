@@ -7,10 +7,9 @@ describe('Button', () => {
   it('renders a button default', () => {
     render(<Button />);
 
-    // const heading = screen.getByRole('heading', {
-    //   name: /welcome to next\.js!/i,
-    // })
+    const button = screen.getByRole('button');
 
-    // expect(heading).toBeInTheDocument()
+    expect(button).toBeInTheDocument();
+    expect(button.innerHTML).toStrictEqual('Button');
   });
 });
