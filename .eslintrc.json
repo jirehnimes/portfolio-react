@@ -1,8 +1,20 @@
 {
-  "plugins": ["react", "prettier", "@typescript-eslint"],
-  "extends": ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
+  "plugins": [
+    "react",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
   "rules": {
-    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-shadow": [
+      "error"
+    ],
     "@typescript-eslint/comma-dangle": [
       "error",
       {
@@ -15,14 +27,34 @@
     ],
     "no-shadow": 0,
     "no-undef": 0,
-    "indent": ["error", 2],
-    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
-    "semi": ["error", "always"],
-    "no-trailing-spaces": ["error"],
-    "no-mixed-spaces-and-tabs": ["error"],
+    "indent": [
+      "error",
+      2
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-trailing-spaces": [
+      "error"
+    ],
+    "no-mixed-spaces-and-tabs": [
+      "error"
+    ],
     "object-curly-newline": [
       "error",
-      { "minProperties": 3, "consistent": true }
+      {
+        "multiline": true,
+        "minProperties": 3,
+        "consistent": true
+      }
     ],
     "comma-dangle": [
       "error",
