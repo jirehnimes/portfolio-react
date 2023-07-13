@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import SectionHome from './SectionHome';
+import Section from './Section';
 
-describe('SectionHome', () => {
+describe('Section', () => {
   it('renders default', () => {
-    const { container } = render(<SectionHome />);
+    const { container } = render(<Section />);
 
     const section = container.querySelector('section');
 
@@ -13,7 +13,7 @@ describe('SectionHome', () => {
   });
 
   it('renders default with text', () => {
-    const { container } = render(<SectionHome />);
+    const { container } = render(<Section />);
 
     const section = container.querySelector('section');
 
@@ -22,5 +22,14 @@ describe('SectionHome', () => {
     section!.innerHTML += 'Hello World!';
 
     expect(section!.innerHTML).toStrictEqual('Hello World!');
+  });
+
+  it('renders above', () => {
+    const { container } = render(<Section above />);
+
+    const section = container.querySelector('section');
+
+    expect(section).toBeInTheDocument();
+    expect(section).toHaveClass('above');
   });
 });
