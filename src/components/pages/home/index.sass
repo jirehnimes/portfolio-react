@@ -1,0 +1,19 @@
+@import '../../../styles/globals'
+
+.home
+  background-color: $black
+
+  .background-overlay
+    z-index: 1
+
+  section
+    position: relative
+    z-index: 2
+
+    &.above
+      z-index: 3
+
+  @import './background-video/HomeBackgroundVideo'
+  @import './experiences/HomeExperiences'
+  @import './hero/HomeHero'
+  @import './portfolio/HomePortfolio'

@@ -1,16 +1,21 @@
 'use client';
 
-import Button from '@/components/button';
+import { BackgroundOverlay } from '@/components/common';
+import {
+  HomeBackgroundVideo,
+  HomeExperiences,
+  HomeHero,
+  HomePortfolio,
+} from '@/components/pages/home';
 
 export default function Index() {
-  const foo = () => {
-    console.log('HAHAHAHA');
-  };
-
   return (
-    <div className='index'>
-      <h1>HELLO WORLD</h1>
-      <Button onClick={() => foo()}>TEST</Button>
+    <div className='home'>
+      <BackgroundOverlay />
+      <HomeBackgroundVideo />
+      <HomeHero />
+      <HomeExperiences />
+      <HomePortfolio />
     </div>
   );
 }

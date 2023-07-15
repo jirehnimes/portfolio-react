@@ -1,0 +1,41 @@
+@mixin devices ($breakpoint)
+  @if $breakpoint == mobile
+    @media only screen and (max-width: 480px)
+      @content
+
+  @if $breakpoint == tablet
+    @media only screen and (max-width: 768px)
+      @content
+
+  @if $breakpoint == small
+    @media only screen and (max-width: 1024px)
+      @content
+
+  @if $breakpoint == medium
+    @media only screen and (max-width: 1200px)
+      @content
+
+  @if $breakpoint == large
+    @media only screen and (min-width: 1201px)
+      @content
+
+@mixin devices-and-orientation ($breakpoint, $orientation: portrait)
+  @if $breakpoint == mobile
+    @media only screen and (max-width: 480px) and (orientation: $orientation)
+      @content
+
+  @if $breakpoint == tablet
+    @media only screen and (max-width: 768px) and (orientation: $orientation)
+      @content
+
+  @if $breakpoint == small
+    @media only screen and (max-width: 1024px) and (orientation: $orientation)
+      @content
+
+  @if $breakpoint == medium
+    @media only screen and (max-width: 1200px) and (orientation: $orientation)
+      @content
+
+  @if $breakpoint == large
+    @media only screen and (min-width: 1201px) and (orientation: $orientation)
+      @content
