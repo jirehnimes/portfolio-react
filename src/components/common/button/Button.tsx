@@ -13,10 +13,12 @@ type ButtonPropsType = DetailedHTMLProps<
 > & { children?: ReactNode };
 
 const Button = ({ children, ...attributes }: ButtonPropsType) => {
+  const classes = `button ${attributes?.className}`;
+
   return (
     <button
       {...attributes}
-      className='button is-primary'
+      className={classes}
     >
       {children || 'Button'}
     </button>

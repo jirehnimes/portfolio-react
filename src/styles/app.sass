@@ -1,7 +1,25 @@
 @import './globals'
 
+*
+  z-index: 1
+
+@import 'bulma/bulma'
+
+@import './_colors'
+@import './_components'
+
 // COMMON COMPONENTS
 @import '../components/common'
 
+// APP COMPONENTS
+@import '../components/app'
+
 // PAGE COMPONENTS
 @import '../components/pages'
+
+html,
+body
+  margin: 0
+  padding: 0
+  background-color: $black
+  overflow-x: hidden

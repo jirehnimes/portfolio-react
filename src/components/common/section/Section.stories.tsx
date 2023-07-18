@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Section from './Section';
 
 const meta: Meta<typeof Section> = {
+  title: 'Common/Section',
   component: Section,
 };
 

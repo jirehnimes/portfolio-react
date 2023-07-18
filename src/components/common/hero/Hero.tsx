@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 type HeroPropsType = {
   title?: string | ReactNode;
   subtitle?: string | ReactNode;
+  className?: string;
   children?: ReactNode;
 };
 
@@ -12,10 +13,13 @@ type HeroPropsType = {
 const Hero = ({
   title,
   subtitle,
+  className,
   children,
 }: HeroPropsType) => {
+  const classes = `hero ${className}`;
+
   return (
-    <section className='hero'>
+    <section className={classes}>
       <div className='hero-body'>
         {!!title === true && <p className='title'>{title}</p>}
         {!!subtitle === true && <p className='subtitle'>{subtitle}</p>}

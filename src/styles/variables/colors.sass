@@ -1,1 +1,20 @@
-$primary: #42a5f5
+$color-brand-light: #dfd7ed
+$color-brand: #60a3d9
+$color-brand-secondary: #0074b7
+$color-brand-dark: #003b73
+
+$color-dark-brand-light: $color-brand-dark
+$color-dark-brand: $color-brand-secondary
+$color-dark-brand-secondary: $color-brand
+$color-dark-brand-dark: $color-brand-light
+
+$color-var-brand-light: var(--color-brand-light)
+$color-var-brand: var(--color-brand)
+$color-var-brand-secondary: var(--color-brand-secondary)
+$color-var-brand-dark: var(--color-brand-dark)
+
+// Override Bulma's color variables.
+
+$primary: $color-brand
+
+$blue: $color-brand-secondary
