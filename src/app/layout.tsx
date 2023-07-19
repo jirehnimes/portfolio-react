@@ -1,17 +1,20 @@
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
+import { config as FontAwesomeConfig } from '@fortawesome/fontawesome-svg-core';
 import { Inter } from 'next/font/google';
+// prettier-ignore
 import { ReactNode } from 'react';
+
 import { Footer, Sidebar } from '@/components/app';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../styles/app.sass';
 
-config.autoAddCss = false;
+FontAwesomeConfig.autoAddCss = false;
 
 type LayoutPropsType = {
   children: ReactNode;
 };
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
   title: 'Jireh Nimes',
@@ -21,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }: LayoutPropsType) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={inter.variable}>
         {children}
         <Sidebar />
         <Footer />

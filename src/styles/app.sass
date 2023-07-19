@@ -17,9 +17,17 @@
 // PAGE COMPONENTS
 @import '../components/pages'
 
+html
+  --scroll-behavior: smooth !important
+  scroll-behavior: smooth !important
+
 html,
 body
   margin: 0
   padding: 0
   background-color: $black
   overflow-x: hidden
+
+body *
+  -webkit-transition: .4s, width 0s
+  transition: .4s, width 0s

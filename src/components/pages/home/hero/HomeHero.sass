@@ -1,13 +1,20 @@
 @import '../../../../styles/globals'
 
-.home-hero,
-.home-hero .hero-body
+.home__hero,
+.home__hero .hero-body
   height: 100%
 
-.home-hero
+.home__hero
   *
     color: $white
 
   .hero-body
     padding-left: 14vw
     padding-right: 14vw
+
+  @import './button-to-experience/ButtonToExperience'
+
+body.dark
+  .home__hero
+    *
+      color: $black !important

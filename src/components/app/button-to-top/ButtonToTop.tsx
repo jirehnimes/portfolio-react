@@ -10,7 +10,14 @@ const SHOW_CLASS = 'show';
 const ButtonToTop = () => {
   const [isShow, setIsShow] = useState<boolean>(false);
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToTop = () => {
+    // prettier-ignore
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
 
   const toggleShow = () => {
     if (window.scrollY > 200) {

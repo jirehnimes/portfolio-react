@@ -1,53 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Title from './Icon';
+import Icon from './Icon';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
-const meta: Meta<typeof Title> = {
-  title: 'Common/Title',
-  component: Title,
+const meta: Meta<typeof Icon> = {
+  title: 'Common/Icon',
+  component: Icon,
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Title>;
-
-const DEFAULT_CHILDREN = 'Hello World!';
+type Story = StoryObj<typeof Icon>;
 
 export const Default: Story = {
-  decorators: [
-    () => (
-      <>
-        {Array.from(Array(7).keys()).map((count: number) => (
-          <>
-            <p>{count === 0 ? 'Default' : `Size ${count}`}</p>
-            <Title size={count === 0 ? undefined : count}>
-              {DEFAULT_CHILDREN}
-            </Title>
-            <br />
-          </>
-        ))}
-      </>
-    ),
-  ],
-};
-
-export const Subtitle: Story = {
-  decorators: [
-    () => (
-      <>
-        {Array.from(Array(7).keys()).map((count: number) => (
-          <>
-            <p>{count === 0 ? 'Default' : `Size ${count}`}</p>
-            <Title
-              size={count === 0 ? undefined : count}
-              subtitle
-            >
-              {DEFAULT_CHILDREN}
-            </Title>
-            <br />
-          </>
-        ))}
-      </>
-    ),
-  ],
+  args: {
+    icon: faArrowUp,
+  },
 };

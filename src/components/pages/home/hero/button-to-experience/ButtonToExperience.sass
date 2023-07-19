@@ -1,0 +1,38 @@
+.button--to-experience
+  position: absolute
+  bottom: 0
+  left: 0
+  height: 80px
+  width: 100%
+  z-index: 3
+  border: none !important
+
+  .container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    p,
+    .icon
+      margin: 0
+      padding: 0
+      height: 20px
+
+    p
+      letter-spacing: 8px
+      text-decoration: none !important
+
+      &:focus-visible
+        border: none !important
+        outline: none !important
+
+  &:hover
+    text-decoration: none !important
+
+    .container
+      p
+        font-size: 1.2rem
+        line-height: 1.4rem
+
+  &:focus
+    box-shadow: none !important
