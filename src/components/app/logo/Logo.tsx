@@ -1,9 +1,20 @@
 'use client';
 
-const Logo = () => {
+import Image, { ImageProps } from 'next/image';
+
+type LogoPropsType = Partial<ImageProps>;
+
+const Logo = ({ ...props }: LogoPropsType) => {
   return (
     <div className='logo-container'>
-      <div className='logo'>LOGO</div>
+      <Image
+        className='logo'
+        {...props}
+        src='/assets/images/logo.png'
+        alt='Jireh Nimes'
+        width={200}
+        height={200}
+      />
     </div>
   );
 };

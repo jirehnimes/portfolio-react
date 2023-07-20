@@ -42,7 +42,7 @@ const ButtonToTop = () => {
 
   return (
     <Button
-      className={`button--to-top is-primary is-outlined${toggleShowClass()}`}
+      className={`button--to-top is-primary ${toggleShowClass()}`}
       onClick={scrollToTop}
     >
       <Icon icon={faChevronUp} />

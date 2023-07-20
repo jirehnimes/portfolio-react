@@ -1,42 +1,38 @@
 import experiences from './experiences';
 import {
-  ExperienceType,
-  ExperienceRoleType,
   ExperienceCompleteType,
+  ExperienceRoleType,
+  ExperienceType,
 } from './experiences.types';
 
-const foo = experiences.reduce(
-  (accumulated: any, current: ExperienceType): ExperienceCompleteType[] => {
-    return [
-      ...accumulated,
-      ...current.roles.map((role: ExperienceRoleType) => ({
-        company: current.company,
-        ...role,
-      })),
-    ];
-  },
-  [],
-);
+export const flattenExperiences = () =>
+  experiences.reduce(
+    (accumulated: any, current: ExperienceType): ExperienceCompleteType[] => {
+      return [
+        ...accumulated,
+        ...current.roles.map((role: ExperienceRoleType) => ({
+          company: current.company,
+          image: current.image,
+          ...role,
+        })),
+      ];
+    },
+    [],
+  );
 
-// foo;
+export const getUniqueCompanies = () => {
+  const checker: string[] = [];
 
-// const monthYearString = (month: number, year: number, isStart = true) => `${String(month).padStart(2, '0')
+  return experiences.reduce(
+    (accumulator: any[], experience: ExperienceType) => {
+      if (checker.includes(experience.id) === false) {
+        checker.push(experience.id);
 
-const getLastDayOfMonthYear = (year: number, month: number) =>
-  new Date(year, month, 0);
+        return [...accumulator, experience];
+      }
 
-// const getTimeOfMonthYear = (month: number, year: number, isStart = true) => {
-//   return new Date(y, m, isStart === true ? 1 : ).getTime();
-// };
-
-foo.sort((previous: ExperienceCompleteType, next: ExperienceCompleteType) => {
-  return previous.year_started - next.year_started;
-});
-
-foo;
-
-const y = 2021;
-const m = 2;
-// const z = new Date(y, m, 1).getTime();
-const z = getLastDayOfMonthYear(y, m);
-z;
+      return accumulator;
+    },
+    [],
+  );
+};

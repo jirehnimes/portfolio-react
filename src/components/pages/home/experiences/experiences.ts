@@ -2,6 +2,7 @@ import { ExperiencesType } from './experiences.types';
 
 export const experiences: ExperiencesType = [
   {
+    id: 'cafe24',
     company: 'SimplexInternet Philippines, Inc. (Cafe24 Philippines, Inc.)',
     image: '/assets/images/cafe24.png',
     roles: [
@@ -15,6 +16,7 @@ export const experiences: ExperiencesType = [
     ],
   },
   {
+    id: 'cashcredit',
     company: 'CC Mobile Philippines, Inc. (Cash Credit)',
     image: '/assets/images/cash_credit.png',
     roles: [
@@ -28,6 +30,7 @@ export const experiences: ExperiencesType = [
     ],
   },
   {
+    id: 'ematic',
     company: 'Ematic Philippines, Inc.',
     image: '/assets/images/ematic_solutions.png',
     roles: [
@@ -48,6 +51,7 @@ export const experiences: ExperiencesType = [
     ],
   },
   {
+    id: 'tas',
     company: 'Total Assurance Group (Philippines) Pty. Ltd.',
     image: '/assets/images/tas.png',
     roles: [
@@ -61,6 +65,7 @@ export const experiences: ExperiencesType = [
     ],
   },
   {
+    id: 'cafe24',
     company: 'Cafe24 Philippines, Inc.',
     image: '/assets/images/cafe24.png',
     roles: [
@@ -81,6 +86,7 @@ export const experiences: ExperiencesType = [
     ],
   },
   {
+    id: 'mhc',
     company: 'Malveda Holdings Corporation',
     image: '/assets/images/mhc.png',
     roles: [

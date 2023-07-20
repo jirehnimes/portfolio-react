@@ -6,17 +6,39 @@
   right: 0
   width: 80px
   height: 100vh
-  padding: 20px 12px 40px 0
+  // padding: 20px 12px 40px 0
+  padding: 20px 0px 40px 0
   background-color: transparent
   z-index: 10
 
+  // Flex
+  display: flex
+  flex-direction: column
+  gap: 12px
+
   .logo-container
     width: 100%
+    padding-right: 12px
+    cursor: pointer
 
-  .button--to-top
-    position: absolute
-    bottom: 20px
-    left: 0
-    width: 68px
+  &__list
+    display: flex
+    flex: 1
+    flex-direction: column
+    justify-content: center
+    gap: 24px
 
+  &__end
+    padding-right: 12px
 
+    // Flex
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-end
+    gap: 12px
+
+    .button--to-top
+      width: 100%
+
+@import './sidebar-item/SidebarItem'

@@ -1,11 +1,11 @@
 'use client';
 
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { Button, Icon } from '@/components/common';
 import { THEME } from '@/consts/common.const';
 
-const ButtonToggleTheme = () => {
+const ButtonToggleTheme: FC = () => {
   const [isDark, setIsDark] = useState<boolean>(false);
 
   const changeTheme = () => {
@@ -18,14 +18,18 @@ const ButtonToggleTheme = () => {
     setIsDark(!isDark);
   };
 
-  const buttonIcon = () => (isDark === true ? faSun : faMoon);
-
   return (
     <Button
       className={`button--toggle-theme is-ghost`}
       onClick={changeTheme}
     >
-      <Icon icon={buttonIcon()} />
+      <div className='button--toggle-theme__light'>
+        <Icon icon={faSun} />
+      </div>
+      <div className='button--toggle-theme__dark'>
+        <Icon icon={faMoon} />
+      </div>
+      <span className='button--toggle-theme__slider' />
     </Button>
   );
 };
